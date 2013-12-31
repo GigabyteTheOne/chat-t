@@ -43,7 +43,7 @@
 
         $.ajax({
             type: 'GET',
-            url: '/proxy/api/last/50'
+            url: '/api/last/50'
         }).success(function (data) {
             msgs = new Backbone.Collection(data.msgs);
             model = new Chat({msgs: msgs});
@@ -56,7 +56,7 @@
 
                 $.ajax({
                     type: 'GET',
-                    url: '/proxy/api/new/' + maxSeq
+                    url: '/api/new/' + maxSeq
                 }).success(function (data) {
                     model.get('msgs').push(data.msgs);
                 });
