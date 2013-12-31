@@ -26,7 +26,7 @@
     };
 
     rivets.formatters.date = function (value) {
-        return moment(value).format('hh:mm:ss MM.DD.YYYY');
+        return moment(value).format('hh:mm:ss DD.MM.YYYY');
     };
 
     var Chat = Backbone.Model.extend({
